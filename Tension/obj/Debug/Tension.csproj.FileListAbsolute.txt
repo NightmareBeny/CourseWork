@@ -4,3 +4,9 @@ C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсова
 C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Tension\obj\Debug\Tension.csproj.CoreCompileInputs.cache
 C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Tension\obj\Debug\Tension.dll
 C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Tension\obj\Debug\Tension.pdb
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\CourseWork\Tension\bin\Debug\Tension.dll
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\CourseWork\Tension\bin\Debug\Tension.pdb
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\CourseWork\Tension\obj\Debug\Tension.csprojAssemblyReference.cache
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\CourseWork\Tension\obj\Debug\Tension.csproj.CoreCompileInputs.cache
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\CourseWork\Tension\obj\Debug\Tension.dll
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\CourseWork\Tension\obj\Debug\Tension.pdb
