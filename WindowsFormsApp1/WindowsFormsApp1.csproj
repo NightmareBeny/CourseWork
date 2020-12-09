@@ -46,14 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Блок+трос.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Блок+трос.designer.cs">
+      <DependentUpon>Блок+трос.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stone.designer.cs">
+      <DependentUpon>Stone.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +77,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Блок+трос.resx">
+      <DependentUpon>Блок+трос.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stone.resx">
+      <DependentUpon>Stone.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +97,46 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Stone\Stone.csproj">
+      <Project>{9fc2be9b-4c2d-4678-96e9-c73ed5933602}</Project>
+      <Name>Stone</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Stretching\Stretching.csproj">
+      <Project>{69d97e97-d05d-43a6-a690-fd80d00f7302}</Project>
+      <Name>Stretching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tension\Tension.csproj">
+      <Project>{01758ed7-ad50-47ad-b8e2-88efdaadb149}</Project>
+      <Name>Tension</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\5434759-physics-and-chemistry-wallpapers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\image_5eb44bfcbf581.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\kak-sdelat-zapis-ekrana-na-ajfone-so-zvukom-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\kisspng-loudspeaker-computer-icons-sound-icon-call-icon-5ad1a50baa3749.6876662915236887156972.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Music\music.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -117,20 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="image_5eb44bfcbf581" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\image_5eb44bfcbf581.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kak_sdelat_zapis_ekrana_na_ajfone_so_zvukom_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\kak-sdelat-zapis-ekrana-na-ajfone-so-zvukom-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kisspng_loudspeaker_computer_icons_sound_icon_call_icon_5ad1a50baa3749_6876662915236887156972" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\kisspng-loudspeaker-computer-icons-sound-icon-call-icon-5ad1a50baa3749.6876662915236887156972.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="music" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Music\music.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="_5434759_physics_and_chemistry_wallpapers" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\5434759-physics-and-chemistry-wallpapers.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
