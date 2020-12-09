@@ -1,0 +1,6 @@
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Stretching\bin\Debug\Stretching.dll
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Stretching\bin\Debug\Stretching.pdb
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Stretching\obj\Debug\Stretching.csprojAssemblyReference.cache
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Stretching\obj\Debug\Stretching.csproj.CoreCompileInputs.cache
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Stretching\obj\Debug\Stretching.dll
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Stretching\obj\Debug\Stretching.pdb

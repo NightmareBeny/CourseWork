@@ -1,0 +1,6 @@
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Stone\bin\Debug\Stone.dll
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Stone\bin\Debug\Stone.pdb
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Stone\obj\Debug\Stone.csprojAssemblyReference.cache
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Stone\obj\Debug\Stone.csproj.CoreCompileInputs.cache
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Stone\obj\Debug\Stone.dll
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\Курсовая\Stone\obj\Debug\Stone.pdb
