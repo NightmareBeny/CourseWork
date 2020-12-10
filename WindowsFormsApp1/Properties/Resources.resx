@@ -133,4 +133,19 @@
   <data name="_5434759_physics_and_chemistry_wallpapers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Images\5434759-physics-and-chemistry-wallpapers.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Без_груза" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Без груза.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Без_силы" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Без силы.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Груза_нет" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Груза нет.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Проволока" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Проволока.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Проволоки_нет" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Проволоки нет.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

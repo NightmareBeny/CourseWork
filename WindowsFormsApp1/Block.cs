@@ -5,9 +5,9 @@ using Tension;
 
 namespace WindowsFormsApp1
 {
-    public partial class Блок_трос : Form
+    public partial class Block : Form
     {
-        public Блок_трос()
+        public Block()
         {
             InitializeComponent(); 
             BackColor = Color.FromArgb(255, 140, 0);
@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
         }
 
         Point point;
-        private void Блок_трос_MouseMove(object sender, MouseEventArgs e)
+        private void Block_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void Блок_трос_MouseDown(object sender, MouseEventArgs e)
+        private void Block_MouseDown(object sender, MouseEventArgs e)
         {
             point = new Point(e.X, e.Y);
         }

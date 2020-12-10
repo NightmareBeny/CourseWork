@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Блок_трос
+    partial class Block
     {
         /// <summary>
         /// Required designer variable.

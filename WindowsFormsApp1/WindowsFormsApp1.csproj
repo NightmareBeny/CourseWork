@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Block.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block.designer.cs">
+      <DependentUpon>Block.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,18 +75,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Блок+трос.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Блок+трос.designer.cs">
-      <DependentUpon>Блок+трос.cs</DependentUpon>
-    </Compile>
     <Compile Include="Stone.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Stone.designer.cs">
       <DependentUpon>Stone.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wire.Designer.cs">
+      <DependentUpon>Wire.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Block.resx">
+      <DependentUpon>Block.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,9 +103,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Блок+трос.resx">
-      <DependentUpon>Блок+трос.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Stone.resx">
       <DependentUpon>Stone.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +158,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Music\music.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\Без груза.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\Без силы.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\Груза нет.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\Проволока.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\Проволоки нет.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
