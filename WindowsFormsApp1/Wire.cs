@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
         }
 
         Point point;
-        private void Block_MouseMove(object sender, MouseEventArgs e)
+        private void Wire_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void Block_MouseDown(object sender, MouseEventArgs e)
+        private void Wire_MouseDown(object sender, MouseEventArgs e)
         {
             point = new Point(e.X, e.Y);
         }

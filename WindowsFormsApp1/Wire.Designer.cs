@@ -215,6 +215,8 @@ namespace WindowsFormsApp1
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Wire";
             this.Text = "Wire";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Wire_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Wire_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

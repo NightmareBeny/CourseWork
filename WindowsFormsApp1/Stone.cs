@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Math;
 using StoneThrow;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -49,7 +42,7 @@ namespace WindowsFormsApp1
         }
 
         Point point;
-        private void График_MouseMove(object sender, MouseEventArgs e)
+        private void Stone_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -58,39 +51,134 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void График_MouseDown(object sender, MouseEventArgs e)
+        private void Stone_MouseDown(object sender, MouseEventArgs e)
         {
             point = new Point(e.X, e.Y);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            label6.Visible = false;
+            label7.Visible = false;
+            label8.Visible = false;
+            label7.Text = "Расстояние между телами равно";
             var stoneTohorizont = new StoneToHorizont();
             var stone = new StoneThrow.Stone();
             try
             {
-                stoneTohorizont.Angle = Convert.ToDouble(textBox1.Text);
-                stone.Speed = stoneTohorizont.Speed = Convert.ToDouble(textBox2.Text);
-                if(textBox2.Text=="0")
+                double angle = Convert.ToDouble(textBox1.Text);
+                double speed = Convert.ToDouble(textBox2.Text);
+                double time = Convert.ToDouble(textBox3.Text);
+
+                #region Обработка ввода данных об угле броска
+                if (angle < 0)
                 {
-                    label7.Visible = true;
-                    label7.Text = "Вы не бросили камни,\n т.е. расстояние между\n ними равно 0";
+                    MessageBox.Show("Угол не может быть отрицательным\nВведите число >=0");
                     return;
                 }
-                stone.Time = stoneTohorizont.Time = Convert.ToDouble(textBox3.Text);
-                if (textBox3.Text == "0")
+                else while (angle > 360)
+                        angle -= 360;
+                if (angle == 90)
                 {
-                    label7.Visible = true;
-                    label7.Text = "Вы не бросили камни,\n т.е. расстояние между\n ними равно 0";
+                    MessageBox.Show("Вы бросили оба камня вверх");
+                    stoneTohorizont.Angle = angle;
+                }
+                if (angle == 0 || angle >= 180)
+                {
+                    MessageBox.Show("Вы оставили 2-ой камень на земле");
+                    stoneTohorizont.Angle = 0;
+                }
+                else stoneTohorizont.Angle = angle;
+                #endregion
+
+                #region Обработка ввода данных о скорости
+                if (speed < 0)
+                {
+                    MessageBox.Show("Скорость не может быть отрицательна\nВведите число >=0");
                     return;
                 }
-                label6.Visible = true;
-                label7.Visible = true;
-                //label7.Text = stoneTohorizont.Distance().ToString() + " (м)";
+                else if (speed == 0)
+                {
+                    MessageBox.Show("Вы оставили камни у себя в руках,\nчтобы кинуть их, введите число >0");
+                    label5.Visible = true;
+                    label6.Visible = true;
+                    label6.Text += "\n0 м";
+                    return;
+                }
+                else stone.Speed = stoneTohorizont.Speed = speed;
+                #endregion
+
+                #region Обработка ввода данных о времени полёта
+                if (time < 0)
+                {
+                    MessageBox.Show("Время не может быть отрицательным\nВведите число >=0");
+                    return;
+                }
+                else if (time == 0)
+                {
+                    MessageBox.Show("Вы оставили камни у себя в руках,\nчтобы кинуть их, введите число >0");
+                    label5.Visible = true;
+                    label6.Visible = true;
+                    label6.Text += "\n0 м";
+                    return;
+                }
+                else stone.Time = stoneTohorizont.Time = time;
+                #endregion
+
+                if (stoneTohorizont.IsFall())
+                {
+                    if (angle == 90)
+                    {
+                        label8.Text = "Камни упали";
+                        label8.Visible = true;
+                        label7.Visible = true;
+                        label7.Text += "\n0 м";
+                    }
+                    else if(angle==0 || angle>=180)
+                    {
+                        if (stone.IsFall())
+                        {
+                            label8.Text = "Объект №1 упал";
+                            label8.Visible = true;
+                            label7.Visible = true;
+                            label7.Text += "\n0 м";
+                        }
+                        else
+                        {
+                            label7.Visible = true;
+                            label7.Text+= "\n" + stone.Distance()+ " м";
+                        }
+                    }
+                    //при броске объекта №2 под углом к горизонту
+                    else if (stone.IsFall())
+                    {
+                        label8.Text = "Камни упали";
+                        label8.Visible = true;
+                        label7.Visible = true;
+                        label7.Text += "\n" + stoneTohorizont.Distance(true) + " м";
+                    }
+                    else
+                    {
+                        label8.Text = "Объект 2-ой упал";
+                        label8.Visible = true;
+                        label7.Visible = true;
+                        label7.Text += "\n"+stoneTohorizont.Distance(false) + " м";
+                    }
+                }
+                else if(angle==90)
+                {
+                    label7.Visible = true;
+                    label7.Text += "\n0 м";
+                }
+                else
+                {
+                    label7.Visible = true;
+                    label7.Text+= "\n" + stoneTohorizont.Distance(false)+ " м";
+                }
             }
             catch (Exception)
             {
-                MessageBox.Show("Введите данные во все поля");
+                MessageBox.Show("Введите данные во все поля\nВвод букв, спец.символом и знаков действий запрещён");
             }
         }
     }
