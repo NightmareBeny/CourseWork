@@ -82,8 +82,8 @@
             this.button1.Text = "На сколько сантиметров опустится проволока, к центру которой привязали груз";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            //this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-            //this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // button2
             // 
@@ -163,7 +163,7 @@
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Мenu_MouseDown);
-            //this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Мenu_MouseMove);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Мenu_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

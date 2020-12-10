@@ -19,3 +19,4 @@ C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\CourseWork\Win
 C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\CourseWork\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\CourseWork\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\CourseWork\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Block.resources
+C:\Users\пк\OneDrive\Рабочий стол\3-й курс\ПП\CourseWork\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Wire.resources

@@ -31,11 +31,11 @@ namespace WindowsFormsApp1
             pictureBox1.Visible = true;
         }
 
-        //private void button1_MouseEnter(object sender, EventArgs e)
-        //{
-        //    button1.BackColor = Color.FromArgb(119, 17, 17);
-        //    button1.ForeColor = Color.White;
-        //}
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.FromArgb(119, 17, 17);
+            button1.ForeColor = Color.White;
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -68,14 +68,14 @@ namespace WindowsFormsApp1
         }
 
         Point point;
-        //private void Мenu_MouseMove(object sender, MouseEventArgs e)
-        //{
-        //    if (e.Button == MouseButtons.Left)
-        //    {
-        //        this.Left += e.X - point.X;
-        //        this.Top += e.Y - point.Y;
-        //    }
-        //}
+        private void Мenu_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - point.X;
+                this.Top += e.Y - point.Y;
+            }
+        }
 
         private void Мenu_MouseDown(object sender, MouseEventArgs e)
         {
@@ -150,11 +150,11 @@ namespace WindowsFormsApp1
             button3.ForeColor = Color.White;
         }
 
-        //private void button1_MouseLeave(object sender, EventArgs e)
-        //{
-        //    button1.BackColor = Color.Red;
-        //    button1.ForeColor = Color.Black;
-        //}
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.Red;
+            button1.ForeColor = Color.Black;
+        }
 
         private void button2_MouseLeave(object sender, EventArgs e)
         {

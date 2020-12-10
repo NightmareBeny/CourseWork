@@ -163,7 +163,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Блок_трос
+            // Block
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -182,10 +182,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Блок_трос";
-            this.Text = "Блок_трос";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Блок_трос_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Блок_трос_MouseMove);
+            this.Name = "Block";
+            this.Text = "Block";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Block_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Block_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
