@@ -17,13 +17,13 @@ namespace StoneThrow
         }
         public double Distance()
         {
-            return Round(Speed * Time - (9.81 * Pow(Time, 2)) / 2, 3);
+            return Round(Speed * Time - (9.81 * Pow(Time, 2)) / 2, 2);
         }
         private double Distance(double time)
         {
-            return Round(Speed * time - (9.81 * Pow(time, 2)) / 2, 3);
+            return Speed * time - (9.81 * Pow(time, 2)) / 2;
         }
-        public double WhatsTime()
+        internal double WhatsTime()
         {
             for (double i = 0; i <= Time; i += 0.1)
             {
@@ -51,16 +51,33 @@ namespace StoneThrow
                 stone.Time = Time; stone.Speed = Speed;
                 if (F1)
                 {
-                    return Speed * Cos(PI * Angle / 180) * stone.WhatsTime();
+                    return Round(Speed * Cos(PI * Angle / 180) * stone.WhatsTime(), 2);
                 }
                 else
                 {
-                    return Sqrt(Pow(stone.Distance(), 2) + Pow(Speed * Cos(PI * Angle / 180) * stone.Time, 2));
+                    return Round(Sqrt(Pow(stone.Distance(), 2) + Pow(Speed * Cos(PI * Angle / 180) * WhatsTime(), 2)), 2);
                 }
             }
             //Если он не упал
-            else return Round(Speed * Time * Sqrt(2 * (1 - Sin(PI * Angle / 180))), 3);
+            else return Round(Speed * Time * Sqrt(2 * (1 - Sin(PI * Angle / 180))), 2);
         }
+        private double Distance(double time)
+        {
+            return Speed * Cos(PI * Angle / 180) * time;
+        }
+
+        private double WhatsTime()
+        {
+            for (double i = 0; i <= Time; i += 0.1)
+            {
+                if (Distance(i) < 0)
+                {
+                    return i;
+                }
+            }
+            return Time;
+        }
+
         //true-камень упал, false-камень не упал
         public bool IsFall()
         {
