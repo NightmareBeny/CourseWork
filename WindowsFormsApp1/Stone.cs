@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
                 }
                 label6.Visible = true;
                 label7.Visible = true;
-                label7.Text = stoneTohorizont.Distance().ToString() + " (м)";
+                //label7.Text = stoneTohorizont.Distance().ToString() + " (м)";
             }
             catch (Exception)
             {
