@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             WMP.URL = @"Music\music.mp3";//музыка должна находится там же, где и само приложение
-            WMP.settings.volume = 50;//громкость
+            WMP.settings.volume = 25;//громкость
             WMP.controls.play();//начинаем играть
             label1.BackColor = Color.FromArgb(211, 104, 29);
             label2.BackColor = Color.FromArgb(211, 104, 29);
@@ -19,14 +19,14 @@ namespace WindowsFormsApp1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            WMP.controls.pause();
+            WMP.settings.volume = 0;
             pictureBox1.Visible = false;
             pictureBox2.Visible = true;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            WMP.controls.play();
+            WMP.settings.volume = 25;
             pictureBox2.Visible = false;
             pictureBox1.Visible = true;
         }
@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
         }
 
         Point point;
-        private void Меню_MouseMove(object sender, MouseEventArgs e)
+        private void Мenu_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -77,23 +77,27 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void Меню_MouseDown(object sender, MouseEventArgs e)
+        private void Мenu_MouseDown(object sender, MouseEventArgs e)
         {
             point = new Point(e.X, e.Y);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            WMP.controls.stop(); WMP.controls.play();
+            WMP.controls.stop();
+            if (pictureBox2.Visible == true)
+                WMP.settings.volume = 0;
+            else WMP.settings.volume = 25;
+            WMP.controls.play();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             //false - открыта, true - не открыта
             bool check = true;
             foreach (Form f in Application.OpenForms)
             {
-                if (f.Name == "График")
+                if (f.Name == "Stone")
                 { check = false; break; }
             }
             if (check)
@@ -102,19 +106,34 @@ namespace WindowsFormsApp1
                 form.Show();
             }
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             //false - открыта, true - не открыта
             bool check = true;
-            foreach(Form f in Application.OpenForms)
+            foreach (Form f in Application.OpenForms)
             {
-                if (f.Name == "Блок_трос")
+                if (f.Name == "Block")
                 { check = false; break; }
             }
             if (check)
             {
-                Блок_трос form = new Блок_трос();
+                Block form = new Block();
+                form.Show();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //false - открыта, true - не открыта
+            bool check = true;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "Wire")
+                { check = false; break; }
+            }
+            if (check)
+            {
+                Wire form = new Wire();
                 form.Show();
             }
         }
