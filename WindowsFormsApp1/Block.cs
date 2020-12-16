@@ -61,48 +61,48 @@ namespace WindowsFormsApp1
         {
             label6.Visible = false;
             label7.Visible = false;
-            TensionClass tension = new TensionClass();
             try
             {
-                tension.Mass = Convert.ToDouble(textBox1.Text);
-                tension.Force = Convert.ToDouble(textBox2.Text);
+                double mass = Convert.ToDouble(textBox1.Text);
+                double force = Convert.ToDouble(textBox2.Text);
                 //Масса груза < 0
-                if (tension.Mass < 0)
+                if (mass < 0)
                     MessageBox.Show("Масса груза не может быть отрицательной величиной\nВведите число >=0");
                 //Сила < 0
-                else if (tension.Force < 0)
+                else if (force < 0)
                     MessageBox.Show("Сила не может быть отрицательной величиной\nВведите число >=0");
                 //Масса блока < 0
                 else if (Convert.ToDouble(textBox3.Text) < 0)
                     MessageBox.Show("Масса блока не может быть отрицательной величиной\nВведите число >=0");
-                else if (tension.Mass == 0)
+                else if (mass == 0)
                 {
-                    MessageBox.Show("Вы ничего не поднимаете, поэтому сила натяжения тросса равна 0\n");
+                    MessageBox.Show("Вы ничего не поднимаете, поэтому сила натяжения тросса и ускорение равны 0\n");
                     pictureBox1.Visible = false;
                     pictureBox2.Visible = true;
                     pictureBox3.Visible = false;
                     label6.Visible = true;
                     label7.Visible = true;
-                    label7.Text = "0(Н)";
+                    label7.Text = "0(Н)\n0(м/с^2)";
                 }
-                else if (tension.Force == 0)
+                else if (force == 0)
                 {
-                    MessageBox.Show("Вы не тянете груз, поэтому сила натяжения тросса равна 0\n");
+                    MessageBox.Show("Вы не тянете груз, поэтому сила натяжения тросса и ускорение равны 0\n");
                     pictureBox1.Visible = false;
                     pictureBox2.Visible = false;
                     pictureBox3.Visible = true;
                     label6.Visible = true;
                     label7.Visible = true;
-                    label7.Text = "0(Н)";
+                    label7.Text = "0(Н)\n0(м/с^2)";
                 }
                 else
                 {
+                    TensionClass tension = new TensionClass(force, mass);
                     pictureBox1.Visible = true;
                     pictureBox2.Visible = false;
                     pictureBox3.Visible = false;
                     label6.Visible = true;
                     label7.Visible = true;
-                    label7.Text = tension.T().ToString() + " (Н)\nМасса блока\nне имеет значения";
+                    label7.Text = tension.T().ToString() + $" (Н)\n{tension.Acceleration} (м/с^2)\nМасса блока\nне имеет значения";
                 }
             } 
             catch (Exception)
